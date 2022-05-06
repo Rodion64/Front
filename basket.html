@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="shortcut icon" type="image/png" href="img/Logo_mini_1.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/basket.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    <script src="scripts/header_footer.js"></script>
+    <link rel="stylesheet" href="css/header_footer.css">
+    <script src="scripts/basket.js"></script>
+</head>
+<body onload="fillHeader(); fillFooter(); fillHeader_1(); add_2(); add_menu() ">
+    
+    <div class="header-container"></div>
+    <div class="menu_bottom"></div>
+
+    <div class="products">
+        <div class="products_main">
+            <div class="products_main_text">
+                Корзина 
+            </div>
+            <div class="products_main_head">
+                <div class="products_main_head_right">
+                    <div class="right_item item_text">В корзине</div>
+                    <div class="right_item item_text_1">Кол-во товара: 0</div>
+                    <a class="right_item item_text_2"></a>
+                    <div class="right_item item_text_3">0 ₽</div>
+                    <button id="myBtn" class="arrange">Перейти к оформлению</button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p class="text_1">Оформление заказа</p>
+                            <form action="">
+                            <div class="item"><input class="item_2" type="text" placeholder="ФИО"></div>
+                            <div class="item"><input class="item_2" type="text" placeholder="Номер телефона"></div>
+                            <div class="item"><input class="item_2" type="text" placeholder="Номер карты"></div>
+                            <div class="item cost_1">Итого: 0 ₽</div>
+                            <button id="myBtn" class="arrange">Оформить заказ</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="products_main_head_left">
+
+
+                </div>
+
+               
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

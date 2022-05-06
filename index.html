@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodion_Smart.com</title>
+    <link rel="shortcut icon" type="image/png" href="img/Logo_mini_1.png"/><!---img/Logo_mini_1.png"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href
+    ="css/header_footer.css">
+    <script src="scripts/header_footer.js"></script>
+</head>
+<body onload="fillHeader();fillHeader_1(); fillFooter();">
+
+    <div class="header-container"></div>
+    <div class="menu_bottom"></div>
+    
+<!-- слайдер -->
+<div>
+    <div class="slideshow-container"> 
+        <div class="mySlides fade">
+          <img src="img/слайдер_1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/слайдер_2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/слайдер_3.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+</div>
+
+    <!-- онсновная часть -->
+    <div class="main">
+        <div class="main_information">
+            
+            <div class="main_center_menu">
+                <div class="center_menu">
+                    <a href="catalog_1.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_1.jpg" alt=""><div class="cnt">Apple</div></div></a>
+                    <a href="catalog_2.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_2.jpg" alt=""><div class="cnt"></div></div></a>
+                    <a href="catalog_3.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_3.jpg" alt=""><div class="cnt"></div></div></a>
+                    <a href="catalog_4.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_4.jpg" alt=""><div class="cnt"></div></div></a>
+                    <a href="catalog_5.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_5.jpg" alt=""><div class="cnt"></div></div></a>
+                    <a href="catalog_6.html"><div class="center_menu_item"><img class="center_menu_img" src="img/Каталог_6.jpg" alt=""><div class="cnt">Pixel</div></div></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="footer"></div> 
+    
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
